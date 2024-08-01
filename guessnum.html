@@ -1,0 +1,35 @@
+<h2>GUES THE NUMBER  !</h2>
+<input id="guess">
+<button onclick="check()">CHECK</button>
+
+<P id="result">YOUR  RIGHT/WRONG
+</P>
+
+<p id="score">score:10</p>
+
+<script>
+    var guess=document.getElementById("guess")
+    var randomnumber=Math.floor(Math.random()*10)+1 //getting random num from 1 to 10 by floor and random syntax
+    var result=document.getElementById("result")
+    var mark=document.getElementById("mark")
+    var Totalscore=10
+
+    function check()
+    {
+        var urnum=guess.value
+        if(randomnumber==urnum)
+        {
+            console.log("yr crt")
+            result.textContent="correct  vro !!"
+            alert="super"
+        }
+        
+    else {
+        console.log("ur wrog")
+        Totalscore=Totalscore-1
+        result.textContent="wrong da bhai "
+        score.textContent="score:"+Totalscore
+       
+    }
+    }
+</script>
